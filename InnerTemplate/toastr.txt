@@ -1,0 +1,15 @@
+function showToast(message, type) {
+    toastr.options = {
+        "positionClass": "toast-top-left",
+        "closeButton": true,
+        "progressBar": true,
+    };
+    if (type == "error") {
+        toastr.error(message);
+    } else if (type == "success") {
+        toastr.success(message);
+    } else if (type == "warning") {
+        toastr.warning(message);
+    }
+}
+

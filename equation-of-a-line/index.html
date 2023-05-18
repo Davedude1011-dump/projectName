@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+        <script src="https://www.desmos.com/api/v1.5/calculator.js?apiKey=dcb31709b452b1cf9dc26972add0fda6"></script>
+
+        <script src="function.js" defer></script>
+        <link rel="stylesheet" href="stylePC.css">
+        <link rel="stylesheet" href="styleMOBILE.css">
+    </head>
+    <body>
+        <div class="visual-screen calculator">
+
+        </div>
+        <button class="home-button" onclick="window.open('../index.html', '_self')">
+            <div class="button-icon home-icon"></div>
+            Home
+        </button>
+        <div class="panel">
+            <div class="panel-buttons-top">
+                <button class="options-button panel-top-button" onclick="Options()">
+                    <div class="button-icon options-icon"></div>
+                    Options
+                </button>
+    
+                <button class="skip-button panel-top-button" onclick="SkipQuestion()">
+                    Skip
+                    <div class="button-icon skip-icon"></div>
+                </button>
+            </div>
+
+
+            <div class="question-text">{ TEXT }</div>
+
+            <div class="input-shell">
+                <input type="text" placeholder="Enter your Answer" class="question-input">
+                <button class="question-submit" onclick="CheckQuestion()">
+                    Submit
+                </button>
+            </div>
+
+
+            <div class="score-tracker">
+                <span class="points">5</span> out of <span class="points-max">7</span>
+            </div>
+        </div>
+    </body>
+</html>

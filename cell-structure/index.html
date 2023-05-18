@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <script src="function.js" defer></script>
+        <script src="cells.js" defer></script>
+
+        <link rel="stylesheet" href="stylePC.css">
+        <link rel="stylesheet" href="styleMOBILE.css">
+    </head>
+    <body>
+        <div class="visual-screen cell-shell">
+
+        </div>
+        <button class="home-button" onclick="window.open('../index.html', '_self')">
+            <div class="button-icon home-icon"></div>
+            Home
+        </button>
+        <div class="panel">
+
+            <div class="check-box-shell">
+                <div class="check-box"><span onclick="toggleAnimalCell()">Animal Cell</span> <input type="checkbox" name="" id="Animal" onclick="SpawnCell(this.id)"></div><br>
+                <div class="check-box"><span onclick="togglePlantCell()">Plant Cell</span> <input type="checkbox" name="" id="Plant" onclick="SpawnCell(this.id)"></div><br>
+                <div class="check-box"><span onclick="toggleBacteriaCell()">Bacteria Cell</span> <input type="checkbox" name="" id="Bacteria" onclick="SpawnCell(this.id)"></div><br>
+            </div>
+
+            <div class="input-shell">
+                <input type="text" placeholder="Enter your Answer" class="question-input">
+                <button class="question-submit" onclick="CheckInput()">
+                    Submit
+                </button>
+            </div>
+        </div>
+    </body>
+</html>

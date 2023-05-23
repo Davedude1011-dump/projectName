@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+@media screen and (orientation: landscape) {
+    body {
+        overflow: hidden;
+        display: flex;
+        flex-direction: row;
+    }
+
+    /* ================ VISUAL SCREEN STYLES =================== */
+
+    @keyframes moveBackground {
+        0% {
+          background-position: 0;
+        }
+        100% {
+          background-position: 100000px;
+        }
+      }
+    .visual-screen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    
+        width: 70vw;
+        height: 100vh;
+    
+        background-color: #ffffff;
+        opacity: 1;
+        background: repeating-linear-gradient( -45deg, #f7f7f7, #f7f7f7 4px, #ffffff 4px, #ffffff 20px );
+        animation: moveBackground 10000s linear infinite;
+    }
+
+    .periodic-table {
+        width: 80%;
+        aspect-ratio: 2/1;
+    }
+    .periodic-table th {
+        width: 15px;
+        height: 15px;
+
+        max-width: 15px;
+        max-height: 15px;
+
+        border-radius: 5px;
+    }
+    .periodic-table th.element {
+        cursor: pointer;
+    }
+    .periodic-table th.element-gap {
+        width: 5px;
+        height: 5px;
+    }
+
+    .alkali-metal { background-color: #ff3232; }
+    .alkaline-earth-metal { background-color: #ff8432; }
+    .lanthanide { background-color: #8b32ff; }
+    .actinide { background-color: #ff32f5; }
+    .transition-metal { background-color: #32a3ff; }
+    .post-transition-metal { background-color: #c45dff; }
+    .metalloid { background-color: #2ead29; }
+    .other-non-metal { background-color: #4aff32; }
+    .halogen { background-color: #eaff32; }
+    .noble-gas { background-color: #3c639e; }
+    .unknown { background-color: #3235ff; }
+
+    .arrow { font-weight: bold; }
+    .arrow-lanthanide { color: #8b32ff; }
+    .arrow-actinide { color: #ff32f5; }
+
+    /* ================================================================= */
+
+    .panel {
+        width: 30vw;
+        height: 100vh;
+        background-color: #D9D9D9;
+    }
+
+
+    .panel-buttons-top {
+        display: flex;
+        flex-direction: row;
+        width: 30vw
+    }
+
+
+    .panel-top-button {
+        width: fit-content;
+        height: fit-content;
+        padding: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 10px;
+        border-radius: 0.4vw;
+        background-color: #CDCDCD;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 0.8vw;
+        cursor: pointer;
+    }
+    .panel-top-button:hover {
+        translate: 0 3px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .options-icon { padding-right: 5px; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg' fill='%23D90034' transform='matrix(-1, 0, 0, 1, 0, 0)'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ctitle%3Eskip-next-solid%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='invisible_box' data-name='invisible box'%3E%3Crect width='48' height='48' fill='none'%3E%3C/rect%3E%3C/g%3E%3Cg id='Q3_icons' data-name='Q3 icons'%3E%3Cg%3E%3Cpath d='M34,10a2,2,0,0,0-2,2V36a2,2,0,0,0,4,0V12A2,2,0,0,0,34,10Z'%3E%3C/path%3E%3Cpath d='M15.5,10.6a2.1,2.1,0,0,0-2.7-.2,1.9,1.9,0,0,0-.2,3L23.2,24,12.6,34.6a1.9,1.9,0,0,0,.2,3,2.1,2.1,0,0,0,2.7-.2l11.9-12a1.9,1.9,0,0,0,0-2.8Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .options-button {
+        width: fit-content;
+        height: fit-content;
+        border: 2px solid #D90034;
+        color: #D90034;
+    }
+
+    .skip-icon { padding-left: 5px; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg' fill='%237000FF'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ctitle%3Eskip-next-solid%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='invisible_box' data-name='invisible box'%3E%3Crect width='48' height='48' fill='none'%3E%3C/rect%3E%3C/g%3E%3Cg id='Q3_icons' data-name='Q3 icons'%3E%3Cg%3E%3Cpath d='M34,10a2,2,0,0,0-2,2V36a2,2,0,0,0,4,0V12A2,2,0,0,0,34,10Z'%3E%3C/path%3E%3Cpath d='M15.5,10.6a2.1,2.1,0,0,0-2.7-.2,1.9,1.9,0,0,0-.2,3L23.2,24,12.6,34.6a1.9,1.9,0,0,0,.2,3,2.1,2.1,0,0,0,2.7-.2l11.9-12a1.9,1.9,0,0,0,0-2.8Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .skip-button {
+        position: absolute;
+        right: 0;
+        border: 2px solid #7000FF;
+        color: #7000FF;
+    }
+
+    .button-icon {
+        width: 1.2vw;
+        aspect-ratio: 1/1;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+
+    .question-text {
+        width: calc(100% - 30px);
+        font-size: 1.2vw;
+        font-weight: bold;
+        text-align: center;
+
+        margin-top: 10vh;
+
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .line-text { color: #0075FF }
+
+
+    .input-shell {
+        width: 100%;
+        height: fit-content;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 15vh;
+    }
+
+    input.question-input {
+        width: calc(80% - 40px);
+        height: fit-content;
+
+        border: 3px solid #0075FF;
+        background-color: #CCCCCC;
+        color: #6A6A6A;
+
+        font-size: 1vw;
+        border-radius: 100px;
+
+        padding: 20px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+    }
+    button.question-submit {
+        margin-top: 2vh;
+
+        width: 70%;
+        height: fit-content;
+
+        background-color: #0075FF;
+        border: none;
+
+        padding: 10px;
+        border-radius: 100px;
+
+        color: white;
+        font-weight: bold;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+
+        cursor: pointer;
+    }
+    button.question-submit:hover {
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        translate: 0 3px
+    }
+
+    .score-tracker {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin: 10px;
+        font-weight: bold;
+        color: #6A6A6A
+    }
+
+    .home-button {
+        position: absolute;
+        width: fit-content;
+        height: fit-content;
+        border: 2px solid #0075FF;
+        color: #0075FF;
+
+        width: fit-content;
+        height: fit-content;
+        padding: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin: 10px;
+        border-radius: 0.4vw;
+        background-color: #CDCDCD;
+        box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+        font-weight: bold;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 0.8vw;
+        cursor: pointer;
+    }
+    .home-icon { padding-left: 5px; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 48 48' xmlns='http://www.w3.org/2000/svg' fill='%230075FF' transform='matrix(-1, 0, 0, 1, 0, 0)'%3E%3Cg id='SVGRepo_bgCarrier' stroke-width='0'%3E%3C/g%3E%3Cg id='SVGRepo_tracerCarrier' stroke-linecap='round' stroke-linejoin='round'%3E%3C/g%3E%3Cg id='SVGRepo_iconCarrier'%3E%3Ctitle%3Eskip-next-solid%3C/title%3E%3Cg id='Layer_2' data-name='Layer 2'%3E%3Cg id='invisible_box' data-name='invisible box'%3E%3Crect width='48' height='48' fill='none'%3E%3C/rect%3E%3C/g%3E%3Cg id='Q3_icons' data-name='Q3 icons'%3E%3Cg%3E%3Cpath d='M34,10a2,2,0,0,0-2,2V36a2,2,0,0,0,4,0V12A2,2,0,0,0,34,10Z'%3E%3C/path%3E%3Cpath d='M15.5,10.6a2.1,2.1,0,0,0-2.7-.2,1.9,1.9,0,0,0-.2,3L23.2,24,12.6,34.6a1.9,1.9,0,0,0,.2,3,2.1,2.1,0,0,0,2.7-.2l11.9-12a1.9,1.9,0,0,0,0-2.8Z'%3E%3C/path%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
+    .home-button:hover {
+        translate: 0 3px;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .title-text { margin-top: 15vh; font-size: xx-large; padding: 1vh; }
+    .type-text { margin-top: 1vh; font-size: larger; padding: 1vh; }
+    .info-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+    .atomic-mass-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+    .melting-point-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+    .boiling-point-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+    .atomic-mass-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+    .dicovery-date-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+    .dicovery-person-text { margin-top: 1vh; font-size: large; padding: 1vh; }
+
+    .more-info {
+        min-width: 30%;
+        width: fit-content;
+        padding: 1vh;
+        margin-top: 1vh;
+        margin-left: 1vh;
+        border-radius: 100px;
+        border: none;
+        background-color: #0075FF;
+        color: white;
+        cursor: pointer;
+    }
+}

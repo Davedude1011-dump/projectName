@@ -1,4 +1,5 @@
 var ProjectsList = [
+    {Name: "Glossary", Subject: "All", CreationDate: "25/05/2023", Link: "glossary/index.html"},
     {Name: "Organelle Functions", Subject: "Biology", CreationDate: "23/05/2023", Link: "organelle-functions/index.html"},
     {Name: "Periodic Table", Subject: "Chemistry", CreationDate: "21/05/2023", Link: "periodic-table/index.html"},
     {Name: "Balancing equations", Subject: "Chemistry", CreationDate: "19/05/2023", Link: "balance-equations/index.html"},

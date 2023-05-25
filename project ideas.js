@@ -7,10 +7,14 @@ PROJECT IDEAS:
 
 - organelle functions [ ✔ ]
 
+- flash cards [  ]
+
+- glossary [ ✔ ]
+
 - diffusion simulation [  ]
 
 - units testing [  ]
-    - ..., μm, mm, cm, m, ...
+    - nm, μm, mm, cm, m
 
 - microscope parts [  ]
     - same game idea as cell organelles
